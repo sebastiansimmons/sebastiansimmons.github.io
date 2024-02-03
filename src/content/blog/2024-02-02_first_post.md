@@ -6,56 +6,93 @@ heroImage: '/blog-placeholder-3.jpg'
 draft: False
 ---
 
-## My Old Website
+## Building This Website
 
-In early 2020, I decided to finally make use of owning sebastiansimmons.com. With all the free time 2020 gave me, I threw myself into the project to learn as much as possible. I went through some JavaScript, React, and CSS tutorials to get a handle on what I thought would be needed to make something cool. I used [Next.js](https://nextjs.org/) as the final framework because I could easily deploy it through Netlify. I confirmed my suspicion that web development isn't
-my favorite form of programming. However, I gained an appreciation for the hard work and expertise required to keep the front end of the internet looking pretty.
+In 2020, I taught myself enough JavaScript and React to hack together a simple personal website. It was a good project to learn some very basic webdev--a type of programming I didn't have any experience with--and build something to help with my job search. Then after trying to figure out how to deploy it, I ported it website over to [Next.js](https://nextjs.org/) so I could deploy it for free with Netlifly.
+
+That brief look into the chaos of a thousand competing framesworks, a hundred different ways was enough webdev for me and I didn't touch it for several years.
 
 ## The New Website
 
-Four years later, I got the itch to start another side project and getting my personal website back online seemed like the perfect project.
-[Astro](https://astro.build/) caught my eye as an exciting framework that didn't require as much JavaScipt to get a website up and running.
-I ran through the introduction tutorial and played around with a few different out of the box themes.
+Four years later, I got the itch to go make a new personal website.
+[Astro](https://astro.build/) caught my eye as an exciting framework that didn't require as much JavaScript as Reach to get a website up and running.
+I ran through the tutorial and played around with the framework. I found it that it made a lot of sense and was fun to work with.
 
-## Getting the Bones
+## Creating an MVP-website
+
+I started this website 4-5 times was because I kept learning about new technologies and trying to get fancy despite not being experienced in this field.
+At various points over the past few weeks I found myself:
+
+1. Trying build the entire website from scratch but make it look as pretty as professional sites
+2. Googling "do I need a CSS framework" and "best CSS framework"
+3. Learnng Svelte without knowing why I was learning it
+4. Trying to shoe-horn in CSS from a cool template into my from scratch website
+5. Scrapping the from scratch website and trying to build on a fancy template
+6. Finding a new template I liked better and starting the process all over again
+7. Not quite liking the template and trying to modify it without understanding the other frameworks they used
+
+
+After starting some form of this project 4-5 times, I decided to just go simple and ship an MVP, Minumum Viable Personal-website. Success for this project means that I can go to sebastiansimmons.com and see some html.
 
 I went simple and used the built-in [Astro blog template](https://github.com/withastro/astro/tree/latest/examples/blog).
-Replace all the boiler plate and default content, then you've got a website!
 
-## Deploying to Production
+I did a pass to replace all the boilerplate and make it technically mine. This took about 5 minutes
 
-I decided to deploy through GitHub Pages since I could easily automate the build with the Astro Deploy to Pages action.
-[Netlifly's free tier](https://www.netlify.com/github-pages-vs-netlify/) was also a consideration, but for the time being, I don't need any of those features.
+## Deploying to the World
+
+With the barest of bones website built, the next step in project Minimum Viable Personal-website was to deploy it to the world.
+
+I looked at [Netlifly's free tier](https://www.netlify.com/github-pages-vs-netlify/), which I've used in the past, but I decided to deploy through GitHub Pages since that process was even simpler; if I ever need the more robust features that Netlifly free tier offers over GitHub Pages free page, it should be an easy switch.
+
+GitHub Actions already had a workflow for deploying an Astro site so I just switched the deploy method to that action.
+
+All you have to do is set the Build and Deployment Source to GitHub Actions
+![GitHub repository GitHub Pages deployment settings](../../../public/first_post/deploymentsettings.png)
+
+and then add the Astro workflow by GitHub pages to the repos actions.
+![GitHub action for Astro](../../../public/first_post/githubactions.png)
+
+After waiting a minute for the build to complete, https://sebastiansimmons.github.io/ was online!
 
 ### Custom Domain
 
+But I don't want to just leave it as a github.io page.
+Time to go mess with DNS settings!
+
 GitHub Pages has easy to follow [documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages) for setting a custom domain and updating your DNS records.
 
-## It's Done
+The longest part of the process is waiting for records to update. If you've ever tried to test out your custom email address, you know the struggle of this wait time.
 
-I wanted to get a minimum viable personal website up and running before doing any customization. I started this project 4-5 different times and spent 
-significantly more time on each of those attempts without shipping anything.
+### It's Online!
 
-Now it's out! Time to customize it and make it my own!
+Wow, a personal website just for me! This counts as a successful Minumum Viable Personal-website. 
 
 
-## The First Real Modifications
 
-Like I've said, web dev isn't really my thing. Despite acknowledging that it is probably the single most useful language to know outside of Python,
-I still find JavaScript more confusing than when I was taking a systems class and learning MIPS assembly or C++ networking.
+### Let's Actually Customize It
 
-Still, I didn't feel right shipping the website until I had done a little more than replace template boilerplate.
+This success lets me do what I actually want do to which is customize the site a little bit and learn a few things along the way.
 
-### Draft Blog Posts
+I decided to two small features to the blog to wrap up the evening. First I reversed the default sorting so that the newest posts showed up first.
 
-The first thing I added was a `draft` field in my markdown blog posts. The "Blog" page hides all pages with `draft == true`. Simple and useful!
+#### Draft Blog Posts
 
-### Future Date Publishing
+Next, I added a `draft` field in frontmatter of markdown blog posts. The __Blog__ page hides all pages with `draft == true`. Simple and useful!
 
-The next feature I wanted to add was publishing pages based on the `pubDate` field. Basically, if `pubDate` is in the future, hide that post until it's the present.
+#### Future Date Publishing
 
-Both of these changes were simple frontmatter fields and `filter` calls, but that's enough for me to feel like I technically customized the website to fit my needs.
+The next feature I wanted to add was publishing pages based on the `pubDate` field. If `pubDate` is in the future, hide that post until it's the present.
+
+This was another simple frontmatter filter, but that's enough for me to feel like I technically customized the website to fit my needs.
+
+I don't even have a use for this yet.
+
+#### Small CSS Changes
+
+I did some simple things like push the footer to the bottom and fudge a few values in the CSS to my liking. 
 
 ## It's Live!
 
-Yay! I made SebastianSimmons.com 2.0. I actually have no idea what I'm going to do on it. But if I want to do anything, I have a place to put it.
+A personal website made over the course of an evening. That's pretty cool.
+
+Thanks for reading!
