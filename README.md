@@ -1,5 +1,7 @@
 # SebastianSimmons.com
 
+[![Deploy Astro site to Pages](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/astro.yml/badge.svg)](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/astro.yml)
+
 It's my personal website.
 
 ```sh
