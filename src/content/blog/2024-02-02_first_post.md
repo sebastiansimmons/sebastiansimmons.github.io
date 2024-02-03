@@ -3,6 +3,7 @@ title: 'Making my website MVP'
 description: 'How I made a lightweight personal website and deployed it.'
 pubDate: '2024-02-02'
 heroImage: '/blog-placeholder-3.jpg'
+draft: False
 ---
 
 ## My Old Website
@@ -36,3 +37,25 @@ I wanted to get a minimum viable personal website up and running before doing an
 significantly more time on each of those attempts without shipping anything.
 
 Now it's out! Time to customize it and make it my own!
+
+
+## The First Real Modifications
+
+Like I've said, web dev isn't really my thing. Despite acknowledging that it is probably the single most useful language to know outside of Python,
+I still find JavaScript more confusing than when I was taking a systems class and learning MIPS assembly or C++ networking.
+
+Still, I didn't feel right shipping the website until I had done a little more than replace template boilerplate.
+
+### Draft Blog Posts
+
+The first thing I added was a `draft` field in my markdown blog posts. The "Blog" page hides all pages with `draft == true`. Simple and useful!
+
+### Future Date Publishing
+
+The next feature I wanted to add was publishing pages based on the `pubDate` field. Basically, if `pubDate` is in the future, hide that post until it's the present.
+
+Both of these changes were simple frontmatter fields and `filter` calls, but that's enough for me to feel like I technically customized the website to fit my needs.
+
+## It's Live!
+
+Yay! I made SebastianSimmons.com 2.0. I actually have no idea what I'm going to do on it. But if I want to do anything, I have a place to put it.
