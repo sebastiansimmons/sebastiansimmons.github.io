@@ -6,9 +6,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
+// Sort by newest publish date, hide draft posts and posts with future pubDates
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-).filter((a) => a.data.draft?.valueOf() != true);
+).filter((a) => a.data.draft?.valueOf() != true && a.data.pubDate.valueOf() <= new Date());
 
 console.log(posts)
 ---
