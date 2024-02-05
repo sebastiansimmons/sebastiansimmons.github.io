@@ -37,7 +37,7 @@ After starting some form of this project 4-5 times, I decided to just go simple 
 
 I went simple and used the built-in [Astro blog template](https://github.com/withastro/astro/tree/latest/examples/blog).
 
-I did a pass to replace all the boilerplate and make it technically mine. This took about 5 minutes
+I did a pass to replace all the boilerplate and make it technically mine. That took about 5 minutes to get something I would be fine with deploying as an MVP.
 
 ## Deploying to the World
 
