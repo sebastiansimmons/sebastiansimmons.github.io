@@ -15,7 +15,8 @@ That brief look into the chaos of a thousand competing framesworks, a hundred di
 ## The New Website
 
 Four years later, I got the itch to go make a new personal website.
-[Astro](https://astro.build/) caught my eye as an exciting framework that didn't require as much JavaScript as Reach to get a website up and running.
+[Astro](https://astro.build/) caught my eye as an exciting framework that didn't require as much JavaScript as React to get a website up and running;
+I found it wild how heavy even a basic website could become when a JavaScript DOM was driving page.
 I ran through the tutorial and played around with the framework. I found it that it made a lot of sense and was fun to work with.
 
 ## Creating an MVP-website
