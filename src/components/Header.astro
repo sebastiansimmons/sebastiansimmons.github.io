@@ -29,72 +29,80 @@ import { SITE_TITLE } from '../consts';
 					></path></svg
 				>
 			</a>
-			<button id="theme-toggle" aria-label="Toggle dark mode">
-				<svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-				<svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-			</button>
 		</div>
 	</nav>
 </header>
-<script is:inline>
-	const handleToggleClick = () => {
-		const element = document.documentElement;
-		element.classList.toggle("dark");
-
-		const isDark = element.classList.contains("dark");
-		localStorage.setItem("theme", isDark ? "dark" : "light");
-	}
-
-	document.getElementById("theme-toggle").addEventListener("click", handleToggleClick);
-</script>
 <style>
 	header {
-		margin: 0;
-		padding: 0 1em;
-		background: rgba(var(--background-body), 0.9);
-		backdrop-filter: blur(10px);
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-		position: sticky;
-		top: 0;
+		margin: 0 auto;
+		width: 740px;
+		max-width: calc(100% - 2em);
+		padding: 1.5em em 0 2em;
+		position: relative;
 		z-index: 10;
+		background: var(--accent);
+		box-shadow: var(--box-shadow);
+		border-radius: 4px;
 	}
 	h2 {
 		margin: 0;
-		font-size: 1em;
+		font-size: 1.2em;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		padding-top: 1em;
 	}
 
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
+		color: rgb(var(--background-body));
 	}
 	nav {
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: space-between;
+		gap: 1em;
 	}
 	nav a {
-		padding: 1em 0.5em;
-		color: rgb(var(--black));
-		border-bottom: 4px solid transparent;
+		padding: 0.5em 1em;
+		color: rgb(var(--background-body));
 		text-decoration: none;
+		font-weight: 600;
+		border-radius: 4px 4px 0 0;
 	}
 	nav a.active {
 		text-decoration: none;
-		border-bottom-color: var(--accent);
+		background-color: rgb(var(--background-body));
+		color: var(--accent);
+	}
+	nav a:hover {
+		background-color: rgba(var(--background-body), 0.2);
+	}
+	nav a.active:hover {
+		background-color: rgb(var(--background-body));
+	}
+	.internal-links {
+		display: flex;
+		gap: 0;
 	}
 	.social-links,
 	.social-links a {
 		display: flex;
 		align-items: center;
+		color: rgb(var(--background-body));
+	}
+	.social-links {
 	}
 	#theme-toggle {
 		background: none;
 		border: none;
 		cursor: pointer;
-		color: rgb(var(--black));
+		color: var(--accent-dark);
 		display: flex;
 		align-items: center;
-		padding: 0 0.5em;
+		padding: 0;
+		width: 24px;
+		height: 24px;
 	}
 	#theme-toggle .moon {
 		display: none;
@@ -109,6 +117,13 @@ import { SITE_TITLE } from '../consts';
 		display: none;
 	}
 	@media (max-width: 720px) {
+		header {
+			width: calc(100% - 2em);
+		}
+		nav {
+			flex-direction: column;
+			align-items: center;
+		}
 		.social-links {
 			display: none;
 		}
