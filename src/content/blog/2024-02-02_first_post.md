@@ -1,49 +1,52 @@
 ---
-title: 'Making my website MVP'
+title: 'Making This Website'
 description: 'How I made a lightweight personal website and deployed it.'
 pubDate: '2024-02-02'
-heroImage: '/blog-placeholder-3.jpg'
+heroImage: '/first_post/finished_mvp.jpg'
 draft: False
 ---
 
-## Building This Website
+While searching for a job fresh out of college in 2020, I learned just enough to hack together a basic website using React and many tutorials to make it look acceptable. At the time, it was a good project for me to learn some very basic web dev and build something to help with my job search.
+When I went to learn how to deploy it (and ideally not pay for hosting), I ended up porting the website over to Next.js and deployed it with the free tier of Netlifly.
 
-In 2020, I taught myself enough JavaScript and React to hack together a simple personal website. It was a good project to learn some very basic webdev--a type of programming I didn't have any experience with--and build something to help with my job search. Then after trying to figure out how to deploy it, I ported it website over to [Next.js](https://nextjs.org/) so I could deploy it for free with Netlifly.
+That website sat around until four years later when I got the itch to explore web dev again. With a few years of professional IT and software development under my belt (though notable not web development), it felt like it was time to revisit a personal website.
 
-That brief look into the chaos of a thousand competing framesworks, a hundred different ways was enough webdev for me and I didn't touch it for several years.
+## Picking a Way to Build the New Website
 
-## The New Website
+I have generally disliked every foray into the land of HTML, CSS, JavaScript, and thousand competing frameworks that attempt to solve different problems with different approaches. From high school to progressing through a computer science undergraduate degree, something has never clicked. When approaching this new version of my site, I wanted to use something slightly above hand writing the site but still give myself a re-education in the world of web development.
 
-Four years later, I got the itch to go make a new personal website.
-[Astro](https://astro.build/) caught my eye as an exciting framework that didn't require as much JavaScript as React to get a website up and running;
+After searching around to see what technologies existed, [Astro](https://astro.build/) caught my eye as an exciting framework that didn't require as much JavaScript as React to get a website up and running;
 I found it wild how heavy even a basic website could become when a JavaScript DOM was driving page.
-I ran through the tutorial and played around with the framework. I found it that it made a lot of sense and was fun to work with.
+After going through the tutorial, I decided to use it to make the website you see before you.
 
 ## Creating an MVP-website
 
-I started this website 4-5 times was because I kept learning about new technologies and trying to get fancy despite not being experienced in this field.
-At various points over the past few weeks I found myself:
+Okay, I need to confess something. I actually started this website about 4-5 times before getting to the current iteration.
+I went down many rabbit holes when it came to styling, additional frameworks, and modifying free templates.
+I even abandoned Astro a few times in the middle before ultimately coming back to it as my static site generator.
 
-1. Trying build the entire website from scratch but make it look as pretty as professional sites
+Some of those fruitless side quests:
+
+1. Trying build the entire website from raw HTML+CSS+JS and make it look as pretty as professional sites
 2. Googling "do I need a CSS framework" and "best CSS framework"
-3. Learnng Svelte without knowing why I was learning it
-4. Trying to shoe-horn in CSS from a cool template into my from scratch website
-5. Scrapping the from scratch website and trying to build on a fancy template
-6. Finding a new template I liked better and starting the process all over again
-7. Not quite liking the template and trying to modify it without understanding the other frameworks they used
+3. Trying to learn 2-3 CSS frameworks before remembering I barely know CSS
+4. Learning Svelte without any particular reason to learn it
+5. Trying to shoe-horn in CSS from a cool template into my from-scratch website
+6. Scrapping the from scratch-website and trying to build on a fancy template
+7. Finding a new template I liked better and starting the process all over again
+8. Not quite liking the template and trying to modify it without understanding the other frameworks they used
 
-
-After starting some form of this project 4-5 times, I decided to just go simple and ship an MVP, Minumum Viable Personal-website. Success for this project means that I can go to sebastiansimmons.com and see some html.
+I was unfocused and needed to narrow my scope. I decided to just go simple and ship an MVP, Minimum Viable Personal-website. I would define success as being able to go to [SebastianSimmons.com](http://sebastiansimmons.com/) and have something load. Once I had that, I could start working on advanced styling or whatever else I wanted to add.
 
 I went simple and used the built-in [Astro blog template](https://github.com/withastro/astro/tree/latest/examples/blog).
 
-I did a pass to replace all the boilerplate and make it technically mine. That took about 5 minutes to get something I would be fine with deploying as an MVP.
+I modified the boilerplate to make it technically "my website". It was time to deploy it and call my MVP goal a success.
 
 ## Deploying to the World
 
 With the barest of bones website built, the next step in project Minimum Viable Personal-website was to deploy it to the world.
 
-I looked at [Netlifly's free tier](https://www.netlify.com/github-pages-vs-netlify/), which I've used in the past, but I decided to deploy through GitHub Pages since that process was even simpler; if I ever need the more robust features that Netlifly free tier offers over GitHub Pages free page, it should be an easy switch.
+I looked at [Netlifly's free tier](https://www.netlify.com/github-pages-vs-netlify/), which the old site used, but I ultimately went with GitHub Pages since that process was even simpler. If I ever need to switch back to netflify or some other service, that would be pretty easy.
 
 GitHub Actions already had a workflow for deploying an Astro site so I just switched the deploy method to that action.
 
@@ -57,18 +60,13 @@ After waiting a minute for the build to complete, https://sebastiansimmons.githu
 
 ### Custom Domain
 
-But I don't want to just leave it as a github.io page.
-Time to go mess with DNS settings!
-
-GitHub Pages has easy to follow [documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages) for setting a custom domain and updating your DNS records.
+Adding my own domain was very easy. GitHub Pages [documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages) for setting a custom domain and updating your DNS records is very straightforward.
 
 The longest part of the process is waiting for records to update. If you've ever tried to test out your custom email address, you know the struggle of this wait time.
 
 ### It's Online!
 
-Wow, a personal website just for me! This counts as a successful Minumum Viable Personal-website. 
-
-
+Wow, a personal website just for me! This counts as a successful Minimum Viable Personal-website.
 
 ### Let's Actually Customize It
 
@@ -92,8 +90,9 @@ I don't even have a use for this yet.
 
 I did some simple things like push the footer to the bottom and fudge a few values in the CSS to my liking. 
 
-## It's Live!
+## It's (a)Live!
 
 A personal website made over the course of an evening. That's pretty cool.
 
-Thanks for reading!
+Most of my programming experience is with Python Qt apps, digital cameras, and image manipulation so I am happy that anything works at all.
+I am still a novice in the web dev world but this felt like a nice step toward learning more.
