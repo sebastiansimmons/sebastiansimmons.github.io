@@ -13,6 +13,18 @@
 	--gray-dark: 34, 41, 57;
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--background-body: 255, 255, 255;
+}
+html.dark {
+	--accent: #7caeff;
+	--accent-dark: #a3cfff;
+	--black: 229, 233, 240;
+	--gray: 150, 160, 180;
+	--gray-light: 45, 55, 75;
+	--gray-dark: 200, 210, 225;
+	--gray-gradient: rgba(var(--gray-light), 50%), #15181f;
+	--box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+	--background-body: 21, 24, 31;
 }
 *, *::before, *::after {
 	box-sizing: border-box;
@@ -37,11 +49,11 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: #fff;
+	background: rgb(var(--background-body));
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.7;
 	min-height: 100vh;
 	display: flex;
@@ -65,19 +77,19 @@ h6 {
 	text-wrap: balance;
 }
 h1 {
-	font-size: 3.052em;
+	font-size: 2.5em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 2em;
 }
 h3 {
-	font-size: 1.953em;
+	font-size: 1.5em;
 }
 h4 {
-	font-size: 1.563em;
+	font-size: 1.25em;
 }
 h5 {
-	font-size: 1.25em;
+	font-size: 1.15em;
 }
 strong,
 b {
