@@ -1,6 +1,6 @@
 # [SebastianSimmons.com](http://sebastiansimmons.com/)
 
-[![Deploy Astro site to Pages](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/astro.yml/badge.svg)](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/deploy.yml)
+[![Deploy Astro site to Pages](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/deploy.yml)
 
 My personal website. It's very and mostly the modified base Astro template.
 
