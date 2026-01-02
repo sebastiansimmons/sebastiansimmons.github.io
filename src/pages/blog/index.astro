@@ -9,7 +9,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
 // Sort by newest publish date, hide draft posts and posts with future pubDates
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-).filter((post) => post.data.draft?.valueOf() != true && post.data.pubDate.valueOf() <= new Date());
+).filter((post) => post.data.draft?.valueOf() != true && post.data.pubDate.valueOf() <= new Date().valueOf());
 
 ---
 
