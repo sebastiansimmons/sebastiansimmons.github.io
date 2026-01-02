@@ -37,11 +37,10 @@ import { SITE_TITLE } from '../consts';
 		margin: 0 auto;
 		width: 740px;
 		max-width: calc(100% - 2em);
-		padding: 1.5em em 0 2em;
+		padding: 1em 2em 0 2em;
 		position: relative;
 		z-index: 10;
 		background: var(--accent);
-		box-shadow: var(--box-shadow);
 		border-radius: 4px;
 	}
 	h2 {
@@ -49,7 +48,7 @@ import { SITE_TITLE } from '../consts';
 		font-size: 1.2em;
 		font-weight: 700;
 		letter-spacing: -0.02em;
-		padding-top: 1em;
+		white-space: nowrap;
 	}
 
 	h2 a,
@@ -69,6 +68,7 @@ import { SITE_TITLE } from '../consts';
 		text-decoration: none;
 		font-weight: 600;
 		border-radius: 4px 4px 0 0;
+		position: relative;
 	}
 	nav a.active {
 		text-decoration: none;
@@ -79,6 +79,15 @@ import { SITE_TITLE } from '../consts';
 		background-color: rgba(var(--background-body), 0.2);
 	}
 	nav a.active:hover {
+		background-color: rgb(var(--background-body));
+	}
+	nav a.active::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -4px;
+		height: 4px;
 		background-color: rgb(var(--background-body));
 	}
 	.internal-links {
@@ -125,6 +134,9 @@ import { SITE_TITLE } from '../consts';
 			align-items: center;
 		}
 		.social-links {
+			display: none;
+		}
+		nav a.active::after {
 			display: none;
 		}
 	}
