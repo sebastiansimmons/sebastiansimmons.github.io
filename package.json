@@ -1,7 +1,7 @@
 {
   "name": "sebastiansimmons-dot-com",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/mdx": "^4.3.13",
     "@astrojs/rss": "^4.0.4",
-    "@astrojs/sitemap": "^3.0.5",
-    "astro": "^4.3.1",
-    "@astrojs/check": "^0.4.1",
-    "typescript": "^5.3.3"
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.16.6",
+    "typescript": "^5.9.3"
   }
 }
