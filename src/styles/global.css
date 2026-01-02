@@ -83,9 +83,6 @@ b {
 a {
 	color: var(--accent);
 }
-a:hover {
-	color: var(--accent);
-}
 p {
 	margin-bottom: 1em;
 }
@@ -122,7 +119,7 @@ pre > code {
 blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
-	margin: 0px;
+	margin: 0;
 	font-size: 1.333em;
 }
 hr {
@@ -152,6 +149,6 @@ hr {
 	clip: rect(1px, 1px, 1px, 1px);
 	/* modern browsers, clip-path works inwards from each corner */
 	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }

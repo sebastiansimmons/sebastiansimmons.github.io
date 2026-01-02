@@ -32,8 +32,12 @@ const posts = (await getCollection('blog')).sort(
 			ul li {
 				width: calc(50% - 1rem);
 			}
-			ul li * {
+			ul li a {
 				text-decoration: none;
+			}
+			ul li img,
+			ul li .title,
+			ul li .date {
 				transition: 0.2s ease;
 			}
 			ul li:first-child {
