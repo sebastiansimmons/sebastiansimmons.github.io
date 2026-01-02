@@ -1,12 +1,15 @@
-# SebastianSimmons.com
+# [SebastianSimmons.com](http://sebastiansimmons.com/)
 
-[![Deploy Astro site to Pages](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/astro.yml/badge.svg)](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/astro.yml)
+[![Deploy Astro site to Pages](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/astro.yml/badge.svg)](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/deploy.yml)
 
-It's my personal website.
+My personal website. It's very and mostly the modified base Astro template.
+
+I hope to eventually do some fun projects here but for now it's just here to run.
+
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside of this Astro project, you'll see the following folders and files:
 
 ```text
 ├── public/
@@ -42,7 +45,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
