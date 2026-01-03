@@ -6,6 +6,7 @@
 
 :root {
 	--accent: #C85A2D;
+	--accent-rgb: 200, 90, 45;
 	--accent-dark: #8B3E1C;
 	--black: 45, 35, 25;
 	--gray: 120, 100, 80;
@@ -129,7 +130,7 @@ table {
 	margin: 1em 0;
 }
 table th {
-	background: rgba(200, 90, 45, 0.15);
+	background: rgba(var(--accent-rgb), 0.15);
 	color: rgb(var(--black));
 	padding: 0.75em;
 	border: 1px solid var(--accent);
@@ -138,7 +139,7 @@ table th {
 }
 table td {
 	padding: 0.75em;
-	border: 1px solid rgba(200, 90, 45, 0.3);
+	border: 1px solid rgba(var(--accent-rgb), 0.3);
 }
 img {
 	max-width: 100%;
@@ -148,7 +149,7 @@ img {
 }
 code {
 	padding: 2px 5px;
-	background-color: rgba(200, 90, 45, 0.1);
+	background-color: rgba(var(--accent-rgb), 0.1);
 	border-radius: 2px;
 	color: var(--accent-dark);
 	font-weight: 600;
@@ -168,7 +169,7 @@ blockquote {
 	padding: 1em 0 1em 1.5em;
 	margin: 1em 0;
 	font-size: 1.333em;
-	background: linear-gradient(90deg, rgba(200, 90, 45, 0.12) 0%, rgba(200, 90, 45, 0) 100%);
+	background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.12) 0%, rgba(var(--accent-rgb), 0) 100%);
 	font-style: italic;
 	color: var(--accent-dark);
 }
