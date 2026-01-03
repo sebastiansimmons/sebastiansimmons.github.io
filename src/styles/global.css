@@ -11,7 +11,6 @@
 	--gray: 120, 100, 80;
 	--gray-light: 245, 230, 210;
 	--gray-dark: 60, 45, 35;
-	--gray-gradient: rgba(var(--gray-light), 50%), #F5E6D3;
 	--box-shadow: 4px 4px 0 rgba(45, 35, 25, 0.15);
 	--background-body: 250, 245, 238;
 }
