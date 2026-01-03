@@ -17,13 +17,13 @@ import { SITE_TITLE } from '../consts';
 <style>
 	header {
 		margin: 0 auto;
-		width: 740px;
+		width: 720px;
 		max-width: calc(100% - 2em);
 		padding: 1em 2em 0 2em;
 		position: relative;
 		z-index: 10;
 		background: var(--accent);
-		border-radius: 4px;
+		border-radius: 12px;
 	}
 	h2 {
 		margin: 0;
@@ -44,7 +44,7 @@ import { SITE_TITLE } from '../consts';
 		justify-content: space-between;
 		gap: 1em;
 	}
-	nav a {
+	.internal-links a {
 		padding: 0.5em 1em;
 		color: rgb(var(--background-body));
 		text-decoration: none;
@@ -52,18 +52,18 @@ import { SITE_TITLE } from '../consts';
 		border-radius: 4px 4px 0 0;
 		position: relative;
 	}
-	nav a.active {
+	.internal-links a.active {
 		text-decoration: none;
 		background-color: rgb(var(--background-body));
 		color: var(--accent);
 	}
-	nav a:hover {
+	.internal-links a:hover {
 		background-color: rgba(var(--background-body), 0.2);
 	}
-	nav a.active:hover {
+	.internal-links a.active:hover {
 		background-color: rgb(var(--background-body));
 	}
-	nav a.active::after {
+	.internal-links a.active::after {
 		content: '';
 		position: absolute;
 		left: 0;
@@ -77,16 +77,11 @@ import { SITE_TITLE } from '../consts';
 		gap: 0;
 	}
 
-	.social-links {
-	}
-	@media (max-width: 740px) {
-		header {
-			width: calc(100% - 2em);
-		}
+	@media (max-width: 720px) {
 		nav {
 			gap: 0.5em;
 		}
-		nav a {
+		.internal-links a {
 			padding: 0.5em 0.5em;
 		}
 	}
