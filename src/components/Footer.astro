@@ -3,7 +3,7 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Sebastian Simmons. All rights reserved.
+	&copy; {today.getFullYear()} Sebastian Simmons.
 	<div class="social-links">
 		<a href="https://www.linkedin.com/in/sebastiansimmons/" target="_blank">
 			<span class="sr-only">My Linkedin</span>
@@ -26,10 +26,9 @@ const today = new Date();
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
+		margin: auto auto 0 auto;
 	}
 	.social-links {
 		display: flex;
@@ -39,9 +38,11 @@ const today = new Date();
 	}
 	.social-links a {
 		text-decoration: none;
-		color: rgb(var(--gray));
+		color: rgb(var(--gray));		
+		display: flex;
+		align-items: center;
 	}
 	.social-links a:hover {
-		color: rgb(var(--gray-dark));
+		color: var(--accent-dark);
 	}
 </style>

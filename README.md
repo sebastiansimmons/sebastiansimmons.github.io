@@ -2,10 +2,9 @@
 
 [![Deploy Astro site to Pages](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/sebastiansimmons/sebastiansimmons.github.io/actions/workflows/deploy.yml)
 
-My personal website. It's very and mostly the modified base Astro template.
+My personal website. It's mostly the modified base Astro template.
 
 I hope to eventually do some fun projects here but for now it's just here to run.
-
 
 ## 🚀 Project Structure
 
